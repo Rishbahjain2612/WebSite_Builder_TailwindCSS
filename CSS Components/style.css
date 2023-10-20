@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#mySidenav {
+    position: fixed;
+    top: 0;
+    left: -255px;
+    height: 100%;
+    background-color: black;
+    overflow-y: auto;
+    transition: left 0.3s;
+}
+
+.main-container {
+    display: flex;
+}
+
+.main {
+    background-color: rgb(226, 199, 110);
+    background-image: url("../IMAGES/pexels-cottonbro-studio-3944423.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    flex: 1;
+    height: 100vh;
+}
