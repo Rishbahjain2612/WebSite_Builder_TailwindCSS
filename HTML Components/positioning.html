@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/motion-tailwind.css"
+        rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../IMAGES/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../IMAGES/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../IMAGES/favicon_io/favicon-16x16.png">
+    <!-- <link rel="manifest" href="../IMAGES/favicon_io/site.webmanifest"> -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+        .inner-main {
+            padding: 3%;
+        }
+
+        .positioning {
+            background-color: beige;
+            height: 65vh;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <div
+        class="main-container flex h-screen w-screen bg-orange-300 bg-cover bg-center bg-no-repeat bg-[url('../IMAGES/workstation-with-laptop.jpg')]">
+        <!-- Navbar -->
+        <div class="flex h-screen w-64 flex-col overflow-y-auto bg-black px-5 py-8 z-30" id="mySidenav">
+            <a href="#">
+                <svg width="40" height="46" viewBox="0 0 50 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M23.2732 0.2528C20.8078 1.18964 2.12023 12.2346 1.08477 13.3686C0 14.552 0 14.7493 0 27.7665C0 39.6496 0.0986153 41.1289 0.83823 42.0164C2.12023 43.5449 23.2239 55.4774 24.6538 55.5267C25.9358 55.576 46.1027 44.3832 48.2229 42.4602C49.3077 41.474 49.3077 41.3261 49.3077 27.8158C49.3077 14.3055 49.3077 14.1576 48.2229 13.1714C46.6451 11.7415 27.1192 0.450027 25.64 0.104874C24.9497 -0.0923538 23.9142 0.00625992 23.2732 0.2528ZM20.2161 21.8989C20.2161 22.4906 18.9835 23.8219 17.0111 25.3997C15.2361 26.7803 13.8061 27.9637 13.8061 28.0623C13.8061 28.1116 15.2361 29.0978 16.9618 30.2319C18.6876 31.3659 20.2655 32.6479 20.4134 33.0917C20.8078 34.0286 19.871 35.2119 18.8355 35.2119C17.8001 35.2119 9.0233 29.3936 8.67815 28.5061C8.333 27.6186 9.36846 26.5338 14.3485 22.885C17.6521 20.4196 18.4904 20.0252 19.2793 20.4196C19.7724 20.7155 20.2161 21.3565 20.2161 21.8989ZM25.6893 27.6679C23.4211 34.9161 23.0267 35.7543 22.1391 34.8668C21.7447 34.4723 22.1391 32.6479 23.6677 27.9637C26.2317 20.321 26.5275 19.6307 27.2671 20.3703C27.6123 20.7155 27.1685 22.7864 25.6893 27.6679ZM36.0932 23.2302C40.6788 26.2379 41.3198 27.0269 40.3337 28.1609C39.1503 29.5909 31.6555 35.2119 30.9159 35.2119C29.9298 35.2119 28.9436 33.8806 29.2394 33.0424C29.3874 32.6479 30.9652 31.218 32.7403 29.8867L35.9946 27.4706L32.5431 25.1532C30.6201 23.9205 29.0915 22.7371 29.0915 22.5892C29.0915 21.7509 30.2256 20.4196 30.9159 20.4196C31.3597 20.4196 33.6771 21.7016 36.0932 23.2302Z"
+                        fill="white"></path>
+                </svg>
+            </a>
+            <div class="mt-6 flex flex-1 flex-col justify-between">
+                <nav class="-mx-3 space-y-6 ">
+                    <div class="space-y-3 ">
+                        <label class="px-3 text-xs font-semibold uppercase text-white">
+                            analytics
+                        </label>
+                        <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-50 hover:text-gray-700"
+                            href="dashboard.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+                                <line x1="12" y1="20" x2="12" y2="10"></line>
+                                <line x1="18" y1="20" x2="18" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="16"></line>
+                            </svg>
+                            <span class="mx-2 text-sm font-medium">Dashboard</span>
+                        </a>
+                        <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+                                <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path>
+                                <path d="M4 6v12c0 1.1.9 2 2 2h14v-4"></path>
+                                <path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"></path>
+                            </svg>
+                            <span class="mx-2 text-sm font-medium">Preview</span>
+                        </a>
+                    </div>
+                    <div class="space-y-3 ">
+                        <label class="px-3 text-xs font-semibold uppercase text-white">
+                            Components
+                        </label>
+                        <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+                                <path
+                                    d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                </path>
+                                <path d="M18 14h-8"></path>
+                                <path d="M15 18h-5"></path>
+                                <path d="M10 6h8v4h-8V6Z"></path>
+                            </svg>
+                            <span class="mx-2 text-sm font-medium">NavBar</span>
+                        </a>
+                        <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+                                <path
+                                    d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                </path>
+                                <path d="M18 14h-8"></path>
+                                <path d="M15 18h-5"></path>
+                                <path d="M10 6h8v4h-8V6Z"></path>
+                            </svg>
+                            <span class="mx-2 text-sm font-medium">Cards</span>
+                        </a>
+                        <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+                                <path
+                                    d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                </path>
+                                <path d="M18 14h-8"></path>
+                                <path d="M15 18h-5"></path>
+                                <path d="M10 6h8v4h-8V6Z"></path>
+                            </svg>
+                            <span class="mx-2 text-sm font-medium">Pricing</span>
+                        </a>
+                        <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+                                <path
+                                    d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                </path>
+                                <path d="M18 14h-8"></path>
+                                <path d="M15 18h-5"></path>
+                                <path d="M10 6h8v4h-8V6Z"></path>
+                            </svg>
+                            <span class="mx-2 text-sm font-medium">Testimonials</span>
+                        </a>
+                        <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                <path d="M2 8c0-2.2.7-4.3 2-6"></path>
+                                <path d="M22 8a10 10 0 0 0-2-6"></path>
+                            </svg>
+                            <span class="mx-2 text-sm font-medium">Carousel</span>
+                        </a>
+                        <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+                                <path
+                                    d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48">
+                                </path>
+                            </svg>
+                            <span class="mx-2 text-sm font-medium">Footer</span>
+                        </a>
+                    </div>
+                    <div class="space-y-3 ">
+                        <label class="px-3 text-xs font-semibold uppercase text-white">
+                            Customization
+                        </label>
+                        <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+                                <path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path>
+                                <path
+                                    d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z">
+                                </path>
+                            </svg>
+                            <span class="mx-2 text-sm font-medium">Colors</span>
+                        </a>
+                        <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+                            href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                </path>
+                            </svg>
+                            <span class="mx-2 text-sm font-medium">Positioning</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="relative main m-5 h-5/6 w-5/6 self-center ">
+
+            <div class="absolute h-full w-full opacity-60 bg-gray-400 rounded-3xl"></div>
+
+            <div class="absolute h-full w-full inner-main">
+                <div class="sub-inner-main h-5/6 grid mt-10 grid-cols-2 gap-8 place-items-center">
+
+
+                    <!-- Element Selection -->
+                    <div
+                        class="positioning w-[20vw] text-center rounded-2xl border-2 border-black overflow-auto scrollbar-hide">
+                        <h3 class="pt-4 pb-12 text-xl font-semibold">Select Your Elements
+                        </h3>
+
+                        <!-- Element card -->
+
+                        <!-- Navbar -->
+                        <div
+                            class="p-2 border border-gray-400 border-alternatives-border text-sm font-semibold focus:outline-none flex justify-between">
+                            <button class="add focus:outline-none" value="navbar">
+                                <i class="material-icons">add</i>
+
+                            </button>
+                            <div class="text-center w-full">
+                                Navbar
+                            </div>
+                        </div>
+
+                        <!-- Cards -->
+                        <div
+                            class="p-2 border-b border-gray-400 border-alternatives-border text-purple text-sm font-semibold focus:outline-none flex justify-between">
+                            <button class="add focus:outline-none" value="cards">
+                                <i class="material-icons">add</i>
+
+                            </button>
+                            <div class="text-center w-full">
+                                Cards
+                            </div>
+                        </div>
+
+                        <!-- Carousel -->
+                        <div
+                            class="p-2 border-b border-gray-400 border-alternatives-border text-purple text-sm font-semibold focus:outline-none flex justify-between">
+                            <button class="add focus:outline-none" value="carousel">
+                                <i class="material-icons">add</i>
+
+                            </button>
+                            <div class="text-center w-full">
+                                Carousel
+                            </div>
+                        </div>
+
+                        <!-- Testimonial -->
+                        <div
+                            class="p-2 border-b border-gray-400 border-alternatives-border text-purple text-sm font-semibold focus:outline-none flex justify-between">
+                            <button class="add focus:outline-none " value="testimonial">
+                                <i class="material-icons">add</i>
+
+                            </button>
+                            <div class="text-center w-full">
+                                Testimonials
+                            </div>
+                        </div>
+
+                        <!-- Pricing -->
+                        <div
+                            class="p-2 border-b border-gray-400 border-alternatives-border text-purple text-sm font-semibold focus:outline-none flex justify-between">
+                            <button class="add focus:outline-none" value="pricing">
+                                <i class="material-icons">add</i>
+
+                            </button>
+                            <div class="text-center w-full">
+                                Pricing
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div
+                            class="p-2 border-b border-gray-400 border-alternatives-border text-purple text-sm font-semibold focus:outline-none flex justify-between">
+                            <button class="add focus:outline-none" value="footer">
+                                <i class="material-icons">add</i>
+
+                            </button>
+                            <div class="text-center w-full">
+                                Footer
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Selected Elements -->
+                    <div class="positioning text-center w-[20vw] rounded-2xl border-2 border-black overflow-auto scrollbar-hide"
+                        id="selected-order">
+                        <h3 class="pt-4 pb-4 text-xl font-semibold">Selected Order
+                        </h3>
+
+                        <!-- Positioning card -->
+                        <!-- <div
+                            class="p-2 border border-gray-400 border-alternatives-border text-purple text-sm font-semibold focus:outline-none flex justify-between">
+                            <button class="focus:outline-none remove">
+                                <i class="remove material-icons">remove</i>
+                            </button>
+                            <div class="text-center w-full">
+                                DUMMY
+                            </div>
+                        </div> -->
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        const addElements = document.querySelectorAll('.add');
+        let count = parseInt(localStorage.getItem('count')) || 0;
+
+        // Retrieving elements from localStorage
+        for (let i = 1; i <= count; i++) {
+            let elID = "el_ordered" + i;
+            if (elID) {
+                let element =
+                    `<div
+                            class="p-2 border border-gray-400 border-alternatives-border text-sm font-semibold focus:outline-none flex justify-between" value="${elID}">
+                            <button class="focus:outline-none remove">
+                                <i class="material-icons">remove</i>
+                            </button>
+                            <div class="text-center w-full">
+                                ${localStorage.getItem(elID)}
+                            </div>
+                    </div>`;
+
+                document.getElementById("selected-order").innerHTML += element;
+            }
+        }
+
+
+        // Adding elements to Local Storage and on the Selected List
+        addElements.forEach(add =>
+        {
+            add.addEventListener('click', () =>
+            {
+                let edit = "el_ordered" + count;
+                let element =
+                    `<div
+                            class="p-2 border border-gray-400 border-alternatives-border text-sm font-semibold focus:outline-none flex justify-between" data-value="123321">
+                            <button class="focus:outline-none remove" value="123">
+                                <i class="material-icons" value="12345">remove</i>
+                            </button>
+                            <div class="text-center w-full">
+                                ${add.value}
+                            </div>
+                            </div>`
+
+                localStorage.setItem(edit, add.value);
+                localStorage.setItem("count", count);
+                count++;
+
+                document.getElementById("selected-order").innerHTML += element;
+
+            })
+        });
+
+
+        const removeElements = document.querySelectorAll('.remove');
+        removeElements.forEach(remove =>
+        {
+            remove.addEventListener('click', () =>
+            {
+                // console.log(add.parentNode.value);
+                let parentElement = remove.parentNode;
+                parentElement.parentNode.removeChild(parentElement);
+
+                // Remove from localStorage
+                let value = parentElement.getAttribute('value');
+                localStorage.removeItem(value);
+
+                // Decrement count
+                count--;
+                localStorage.setItem("count", count);
+            })
+        });
+
+
+    </script>
+</body>
+
+</html>
