@@ -15,17 +15,7 @@
     <!-- <link rel="manifest" href="../IMAGES/favicon_io/site.webmanifest"> -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <style>
-        .inner-main {
-            padding: 3%;
-        }
-
-        .positioning {
-            background-color: beige;
-            height: 65vh;
-        }
-    </style>
+    <link rel="stylesheet" href="../CSS Components/positioning.css">
 
 </head>
 
@@ -308,77 +298,7 @@
     </div>
 
 
-    <script>
-        const addElements = document.querySelectorAll('.add');
-        let count = parseInt(localStorage.getItem('count')) || 0;
-
-        // Retrieving elements from localStorage
-        for (let i = 1; i <= count; i++) {
-            let elID = "el_ordered" + i;
-            if (elID) {
-                let element =
-                    `<div
-                            class="p-2 border border-gray-400 border-alternatives-border text-sm font-semibold focus:outline-none flex justify-between" value="${elID}">
-                            <button class="focus:outline-none remove">
-                                <i class="material-icons">remove</i>
-                            </button>
-                            <div class="text-center w-full">
-                                ${localStorage.getItem(elID)}
-                            </div>
-                    </div>`;
-
-                document.getElementById("selected-order").innerHTML += element;
-            }
-        }
-
-
-        // Adding elements to Local Storage and on the Selected List
-        addElements.forEach(add =>
-        {
-            add.addEventListener('click', () =>
-            {
-                let edit = "el_ordered" + count;
-                let element =
-                    `<div
-                            class="p-2 border border-gray-400 border-alternatives-border text-sm font-semibold focus:outline-none flex justify-between" data-value="123321">
-                            <button class="focus:outline-none remove" value="123">
-                                <i class="material-icons" value="12345">remove</i>
-                            </button>
-                            <div class="text-center w-full">
-                                ${add.value}
-                            </div>
-                            </div>`
-
-                localStorage.setItem(edit, add.value);
-                localStorage.setItem("count", count);
-                count++;
-
-                document.getElementById("selected-order").innerHTML += element;
-
-            })
-        });
-
-
-        const removeElements = document.querySelectorAll('.remove');
-        removeElements.forEach(remove =>
-        {
-            remove.addEventListener('click', () =>
-            {
-                // console.log(add.parentNode.value);
-                let parentElement = remove.parentNode;
-                parentElement.parentNode.removeChild(parentElement);
-
-                // Remove from localStorage
-                let value = parentElement.getAttribute('value');
-                localStorage.removeItem(value);
-
-                // Decrement count
-                count--;
-                localStorage.setItem("count", count);
-            })
-        });
-
-
+    <script src="../JAVASCRIPT Components/positioning.js">
     </script>
 </body>
 
