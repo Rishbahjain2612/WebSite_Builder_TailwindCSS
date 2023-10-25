@@ -9,6 +9,35 @@
 
 <body>
 
+    <div class="container" id="container">
+
+    </div>
+
+
+    <script>
+
+
+        // Adding containers for elements dynamically
+        window.onload = function ()
+        {
+            let container = document.getElementById("container");
+            let count = localStorage.getItem("count");
+
+            for (let i = 0; i < count; i++) {
+                let id = "el_ordered" + i;
+                let value = localStorage.getItem(id);
+
+                if (value) {
+                    let element =
+                        `<div id="${value + i}"></div>`;
+
+                    container.innerHTML += element;
+                }
+            }
+        }
+
+
+    </script>
 </body>
 
 </html>
