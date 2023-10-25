@@ -213,14 +213,15 @@
 
                 <div class="sub-inner-main h-5/6 grid mt-10 grid-cols-6 gap-5">
                     <!-- positioning -->
-                    <div class="positioning text-center rounded-2xl border-2 border-black overflow-auto">
+                    <div class="positioning text-center rounded-2xl border-2 border-black overflow-auto"
+                        id="selected-order">
 
                         <!-- heading -->
                         <h3 class="pt-4 pb-4 text-xl font-semibold">Positioning
                         </h3>
 
                         <!-- Positioning card -->
-                        <div
+                        <!-- <div
                             class="p-2 border border-gray-400 border-alternatives-border text-purple text-sm font-semibold focus:outline-none flex justify-between">
                             <button class="focus:outline-none">
                                 <i class="material-icons">delete</i>
@@ -229,7 +230,7 @@
                             <div class="text-center w-full">
                                 DUMMY
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                     <!-- Components -->
@@ -266,6 +267,30 @@
         </div>
 
     </div>
+
+    <script>
+        // Retrieving elements from localStorage
+        let count = parseInt(localStorage.getItem('count'))
+        for (let i = 0; i < count; i++) {
+            let elID = "el_ordered" + i;
+            let storedValue = localStorage.getItem(elID);
+            if (storedValue) {
+                let element = `
+                    <div
+                            class="p-2 m-2 border border-gray-400 border-alternatives-border text-purple text-sm font-semibold focus:outline-none flex justify-between">
+                            <button class="focus:outline-none">
+
+                            </button>
+                            <div class="text-center w-full">
+                                ${storedValue}
+                            </div>
+                        </div>`
+
+                document.getElementById("selected-order").innerHTML += element;
+            }
+        }
+    </script>
+
 </body>
 
 </html>

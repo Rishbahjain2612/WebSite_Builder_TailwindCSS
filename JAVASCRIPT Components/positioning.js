@@ -11,7 +11,7 @@ for (let i = 0; i < count; i++)
     {
         let element =
             `<div
-            class="p-2 border border-gray-400 border-alternatives-border text-sm font-semibold focus:outline-none flex justify-between" value="${elID}">
+            class="p-2 m-1 border border-gray-400 border-alternatives-border text-sm font-semibold focus:outline-none flex justify-between" value="${elID}">
             <button class="focus:outline-none remove" onClick="removeEle(event)">
                 <i class="material-icons" data-parent=${storedValue}>remove</i>
             </button>
@@ -41,7 +41,7 @@ addElements.forEach(add => {
 
             let element =
                 `<div
-            class="p-2 border border-gray-400 border-alternatives-border text-sm font-semibold focus:outline-none flex justify-between" value="${edit}">
+            class="p-2 m-1 border border-gray-400 border-alternatives-border text-sm font-semibold focus:outline-none flex justify-between" value="${edit}">
             <button class="focus:outline-none remove" onClick="removeEle(event)">
                 <i class="material-icons" data-parent=${add.getAttribute("data-value")}>remove</i>
             </button>
