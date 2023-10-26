@@ -9,6 +9,13 @@
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/motion-tailwind.css"
         rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../IMAGES/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../IMAGES/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../IMAGES/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../IMAGES/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body class="bg-gray-200">
@@ -250,7 +257,7 @@
                 </form>
             </div>
 
-            <div id="deployed" class="flex flex-row"></div>
+            <div id="deployed" class="flex flex-wrap"></div>
         </div>
     </div>
     <script>
@@ -293,7 +300,7 @@
                     let cardData = JSON.parse(localStorage.getItem(cardId));
 
                     let card = `
-                    <div class="mt-3 mb-3 max-w-xl mx-auto">
+                    <div class="mt-3 mb-3 max-w-xl mx-auto flex-grow">
 
                         <div
                             class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
@@ -339,6 +346,7 @@
             const link = document.getElementById("link").value;
             const linktext = document.getElementById("linktext").value;
             const preview = document.getElementById("preview");
+            // let count = localStorage.getItem('count');
 
             const root = document.getElementById("deployed");
 
@@ -357,11 +365,13 @@
                     link: link,
                     linktext: linktext
                 }
+                // count++;
 
                 localStorage.setItem(cardId, JSON.stringify(cardData));
+                // localStorage.setItem('count', count);
 
                 let card = `
-                    <div class="mt-3 mb-3 max-w-xl mx-auto">
+                    <div class="mt-3 mb-3 max-w-xl mx-auto flex-grow">
 
                     <div
                         class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">

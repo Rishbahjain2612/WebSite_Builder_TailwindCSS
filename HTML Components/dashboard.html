@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../IMAGES/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../IMAGES/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../IMAGES/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="../IMAGES/favicon_io/site.webmanifest">
+    <!-- <link rel="manifest" href="../IMAGES/favicon_io/site.webmanifest"> -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
@@ -91,7 +91,7 @@
                             Components
                         </label>
                         <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                            href="#">
+                            href="navbar.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
@@ -105,7 +105,7 @@
                             <span class="mx-2 text-sm font-medium">NavBar</span>
                         </a>
                         <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                            href="#">
+                            href="cards.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
@@ -119,7 +119,7 @@
                             <span class="mx-2 text-sm font-medium">Cards</span>
                         </a>
                         <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                            href="#">
+                            href="pricing.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
@@ -133,7 +133,7 @@
                             <span class="mx-2 text-sm font-medium">Pricing</span>
                         </a>
                         <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                            href="#">
+                            href="testimonial.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
@@ -147,7 +147,7 @@
                             <span class="mx-2 text-sm font-medium">Testimonials</span>
                         </a>
                         <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                            href="#">
+                            href="carousel.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
@@ -159,7 +159,7 @@
                             <span class="mx-2 text-sm font-medium">Carousel</span>
                         </a>
                         <a class="flex transform items-center rounded-lg px-3 py-2 text-gray-200 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
-                            href="#">
+                            href="footer.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
@@ -237,13 +237,13 @@
                     <div class="components text-center rounded-2xl col-span-5 border-2 border-black overflow-auto">
                         <!-- Heading -->
                         <h4 class="pt-4 pb-4 text-xl font-semibold">Components</h4>
-                        <div class="pl-10 pr-10 h-5/6 grid grid-cols-5 gap-3">
+                        <div class="pl-10 pr-10 h-5/6 grid grid-cols-5 gap-3" id="componentConatiner">
                             <!-- cards -->
-                            <div
+                            <!-- <div
                                 class="bg-gray-400 h-40 flex justify-center rounded-xl items-center border-2 border-gray-500">
                                 DUMMY
 
-                            </div>
+                            </div> -->
                         </div>
 
                     </div>
@@ -287,6 +287,37 @@
                         </div>`
 
                 document.getElementById("selected-order").innerHTML += element;
+            }
+        }
+
+        for (let j = 0; j < localStorage.length; j++) {
+            const container = document.getElementById("componentConatiner");
+            let component = localStorage.key(j);
+            if (component == 'navbarData') {
+                let element = `<div
+                                class="bg-gray-400 h-40 flex justify-center rounded-xl items-center border-2 border-gray-500">
+                                Navbar
+                            </div>`;
+                container.innerHTML += element;
+            }
+            else if (component == 'pricingData') {
+                let element = `<div
+                                class="bg-gray-400 h-40 flex justify-center rounded-xl items-center border-2 border-gray-500">
+                                Pricing
+                            </div>`;
+                container.innerHTML += (element);
+            } else if (component.startsWith('card')) {
+                let element = `<div
+                                class="bg-gray-400 h-40 flex justify-center rounded-xl items-center border-2 border-gray-500">
+                                Card
+                            </div>`;
+                container.innerHTML += (element);
+            } else if (component == 'footerData') {
+                let element = `<div
+                                class="bg-gray-400 h-40 flex justify-center rounded-xl items-center border-2 border-gray-500">
+                                Footer
+                            </div>`;
+                container.innerHTML += (element);
             }
         }
     </script>
