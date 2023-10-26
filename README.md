@@ -40,5 +40,3 @@ After that, simply open the `index.html` file in a web browser.
 - [W3Schools](https://www.w3schools.com/): Provides tutorials and examples for web development technologies.
 
 
-
-*Some components are still under progress and will be completed soon, stay tuned.*
