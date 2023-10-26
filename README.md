@@ -30,7 +30,9 @@ You have full control over the positioning of elements in your project. To posit
 
 ### How to Run
 
-To view your website, simply open the `index.html` file in a web browser. You can also use a local development server if you prefer.
+To run this website, you can open CLI and type `git clone https://github.com/Rishbahjain2612/WebSite_Builder_TailwindCSS` and press enter.
+
+After that, simply open the `index.html` file in a web browser. 
 
 ### Additional Resources
 
